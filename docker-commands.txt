@@ -1,4 +1,9 @@
----------------------
+##Ola voce esta vendo os comando que eu utilizei  para criar a aplicaçao por meio de continer , porem a melhor forma é por meio dos aquivos de docker compose e suas images que tambem foi ultilizado nesse curso 
+
+
+
+
+--------------------
 Create Network
 ---------------------
 

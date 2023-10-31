@@ -1,3 +1,4 @@
+## arquivo para ignorar certos dados no momento de ultilizar o docker.compose (importante principalmente se for adicionar algum arquivo.pem para fins de segurança)
 node_modules
 .git
 Dockerfile

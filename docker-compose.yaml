@@ -1,5 +1,6 @@
 version: "3.8"
 services:
+## um banco mongo direto da imagem do docker.hub porem com volumes para ter persistência ,setamos os enviroment do banco e ultilizamos a porta 27017 com base na documentaçao 
   mongodb:
     image: 'mongo'
     volumes:
@@ -7,6 +8,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: max
       MONGO_INITDB_ROOT_PASSWORD: secret
+
+## ##  criamos a image com base no dockerfiles dentro na pasta beackend apontamos para porta 80:80 (http)  ,criamos os volumes para persistência e  a envireoment do banco e setamos os depend para cria o beack com o banco somente
   backend:
     build: ./backend
     ports:
@@ -21,6 +24,7 @@ services:
     depends_on:
       - mongodb
 
+## criamos a image com base no dockerfiles ./frontend e ultizamos a porta 3000:3000 (tcp/ip) em locahost devido ser uma aplicaçao de fim educativo
   frontend:
     build: ./frontend
     ports:
